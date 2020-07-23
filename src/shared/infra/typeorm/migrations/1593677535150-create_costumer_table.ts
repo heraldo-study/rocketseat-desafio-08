@@ -21,6 +21,7 @@ export default class CreateCostumerTable1593677535150
           {
             name: 'email',
             type: 'varchar',
+            isUnique: true,
           },
           {
             name: 'created_at',

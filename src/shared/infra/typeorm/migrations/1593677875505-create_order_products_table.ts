@@ -5,7 +5,7 @@ export default class CreateOrderProductsTable1593677875505
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'order_products',
+        name: 'orders_products',
         columns: [
           {
             name: 'id',
@@ -19,19 +19,17 @@ export default class CreateOrderProductsTable1593677875505
             type: 'decimal',
             precision: 10,
             scale: 2,
-            isNullable: false,
           },
           {
             name: 'quantity',
             type: 'int',
-            isNullable: false,
-          },
-          {
-            name: 'product_id',
-            type: 'uuid',
           },
           {
             name: 'order_id',
+            type: 'uuid',
+          },
+          {
+            name: 'product_id',
             type: 'uuid',
           },
           {

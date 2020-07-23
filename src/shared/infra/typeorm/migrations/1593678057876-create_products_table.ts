@@ -23,12 +23,10 @@ export default class CreateProductsTable1593678057876
             type: 'decimal',
             precision: 10,
             scale: 2,
-            isNullable: false,
           },
           {
             name: 'quantity',
             type: 'int',
-            isNullable: false,
           },
           {
             name: 'created_at',

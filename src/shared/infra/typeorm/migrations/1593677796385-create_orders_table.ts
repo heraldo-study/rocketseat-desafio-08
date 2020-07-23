@@ -17,7 +17,6 @@ export default class CreateOrdersTable1593677796385
           {
             name: 'customer_id',
             type: 'uuid',
-            isNullable: true,
           },
           {
             name: 'created_at',
@@ -28,6 +27,16 @@ export default class CreateOrdersTable1593677796385
             name: 'updated_at',
             type: 'timestamp',
             default: 'now()',
+          },
+        ],
+        foreignKeys: [
+          {
+            name: 'Costumer',
+            referencedTableName: 'customers',
+            referencedColumnNames: ['id'],
+            columnNames: ['customer_id'],
+            onDelete: 'SET NULL',
+            onUpdate: 'CASCADE',
           },
         ],
       }),
